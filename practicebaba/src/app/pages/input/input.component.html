@@ -1,0 +1,6 @@
+<div class="form-control {{ bg }}" style="margin-top: 100px">
+  <!-- <div [innerHtml]="inp"></div> -->
+  <label for="uname">{{ name }}</label>
+  <input type="{{ type }}" name="uname" (keyup.enter)="changeHandler($event)" />
+  <small>{{ hint }}</small>
+</div>
