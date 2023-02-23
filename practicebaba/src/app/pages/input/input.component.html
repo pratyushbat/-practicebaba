@@ -1,6 +1,11 @@
-<div class="form-control {{ bg }}" style="margin-top: 100px">
-  <!-- <div [innerHtml]="inp"></div> -->
-  <label for="uname">{{ name }}</label>
-  <input type="{{ type }}" name="uname" (keyup.enter)="changeHandler($event)" />
-  <small>{{ hint }}</small>
+<div class="form-control {{ bg }}">
+  {{ id }}
+  <ng-content select="label"></ng-content>
+  <div class="input">
+    <ng-content></ng-content>
+  </div>
+  <ng-content select=".smallone"></ng-content>
+  <div class="input">
+    <ng-content select="[id=phonelbl]"></ng-content>
+  </div>
 </div>

@@ -6,11 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.sass'],
 })
 export class AppComponent {
-  title = 'practicebaba';
-  html = `<h1>Email </h1> <input type='text'>`;
+  phVal: string;
   constructor() {}
-  parentHandler(evt: any) {
-    console.log('o');
-    console.log(evt);
+  changeHandler(evt: any) {
+    console.log(evt.target.value);
   }
 }
