@@ -1,0 +1,17 @@
+.facts{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: fixed;
+    top: 560px;
+    width: 100vw;
+    text-align: center;
+    opacity: 1;
+    &.hide{
+      opacity: 0;
+    transition: opacity 1s;
+    }
+}

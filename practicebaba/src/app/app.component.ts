@@ -1,19 +1,60 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import {
+  NavigationCancel,
+  NavigationEnd,
+  NavigationError,
+  NavigationStart,
+  Router,
+} from '@angular/router';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.sass'],
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
+  loading = false;
+  facts: any[] = [
+    '71 branches all over the world',
+    '23561  branches so far',
+    'has sold 3 million copies',
+    'Tested over 10 years',
+    '4.7 % revenue share',
+    '20 countries across revenue share',
+  ];
+  fact = '71 branches all over the world';
+  counter = 1;
+  isHide = false;
   phVal: string;
-  constructor() {
+  constructor(private router: Router) {
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationStart) {
+        this.loading = true;
+      }
+      if (event instanceof NavigationEnd) {
+        this.loading = false;
+      }
+      if (event instanceof NavigationCancel) {
+        this.loading = false;
+      }
+      if (event instanceof NavigationError) {
+        this.loading = false;
+      }
+    });
     // console.log('App consrtructor');
   }
 
-  // ngOnInit(): void {
-  //   console.log('App: ngoninit');
-  // }
+  ngOnInit(): void {
+    // console.log('App: ngoninit');
+    this.counter = 1;
+    setInterval(() => {
+      this.fact = this.facts[this.counter];
+      this.counter < 5 ? this.counter++ : 0;
+    }, 4000);
+    setInterval(() => {
+      this.isHide = !this.isHide;
+    }, 2000);
+  }
   // ngOnChanges() {
   //   console.log('App: ng on changes');
   // }

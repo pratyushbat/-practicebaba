@@ -13,6 +13,8 @@ import { WrapperComponent } from './pages/wrapper/wrapper.component';
 import { HelloComponent } from './pages/hello/hello.component';
 import { PagenotfoundComponent } from './pages/pagenotfound/pagenotfound.component';
 import { ByeComponent } from './pages/bye/bye.component';
+import { ParentOneComponent } from './pages/parent-one/parent-one.component';
+import { ParentOneChildComponent } from './pages/parent-one-child/parent-one-child.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,8 @@ import { ByeComponent } from './pages/bye/bye.component';
     HelloComponent,
     PagenotfoundComponent,
     ByeComponent,
+    ParentOneComponent,
+    ParentOneChildComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
