@@ -1,8 +1,9 @@
 <div class="form-control {{ bg }}">
-  {{ id }}
-  <ng-content select="label"></ng-content>
+  <ng-content select="label"></ng-content> {{ id }}
+  <button (click)="show = !show">Toggle</button>
+  <ng-content *ngIf="show"></ng-content>
   <div class="input">
-    <ng-content></ng-content>
+    <ng-content select="input"></ng-content>
   </div>
   <ng-content select=".smallone"></ng-content>
   <div class="input">

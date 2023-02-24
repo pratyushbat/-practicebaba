@@ -307,6 +307,7 @@
 <!-- Toolbar -->
 
 <app-input bg="primary" [id]="phVal">
+  <app-counter></app-counter>
   <label for="uname"> Email address </label>
   <input
     type="text"
@@ -314,9 +315,9 @@
     (keyup.enter)="changeHandler($event)"
   />
   <small class="smallone">Your Email address</small>
-  <input id="phonelbl" />
 </app-input>
 <app-input bg="warn" [id]="phVal">
+  <app-counter></app-counter>
   <label for="uname"> Password</label>
   <input
     type="password"
@@ -324,10 +325,10 @@
     (keyup.enter)="changeHandler($event)"
   />
   <small class="smallone">Secret......</small>
-  <input id="phonelbl" />
 </app-input>
 
 <app-input bg="accent" [id]="phVal">
+  <app-counter></app-counter>
   <label for="uname"> Phone</label>
   <input
     type="number"
@@ -335,7 +336,62 @@
     [(ngModel)]="phVal"
   />
   <small class="smallone">Indian numbers only</small>
-  <input id="phonelbl" />
 </app-input>
 
+<ng-container *ngIf="isShowCon">
+  <app-counter></app-counter>
+</ng-container>
+
+<ng-template #radioTemplate let-name let-n="iname">
+  {{ name }}
+  <input type="radio" [name]="n" />
+</ng-template>
+
+<app-temp-input
+  name="gender"
+  [template]="radioTemplate"
+  [values]="['male', 'female', 'other', 'rev']"
+>
+</app-temp-input>
+<div>
+  <app-temp-input
+    name="food"
+    [template]="radioTemplate"
+    [values]="['veg', 'non veg', 'mix']"
+  >
+  </app-temp-input>
+</div>
+
+<div>
+  <button (click)="incCustom(custominp.value)">increment custom</button>
+  <input type="text" placeholder="custom input" #custominp />
+  <input type="checkbox" #customcheck1 (change)="changeStatus($event, 'one')" />
+  <input type="checkbox" #customcheck2 (change)="changeStatus($event, 'two')" />
+  <input
+    type="checkbox"
+    #customcheck3
+    (change)="changeStatus($event, 'three')"
+  />
+</div>
+
+<h3>Angular App</h3>
+<section>
+  <div>
+    <label>Dir/File Name</label>
+    <input type="text" #dir />
+  </div>
+  <div>
+    <label>Commit </label>
+    <input type="text" #msg />
+  </div>
+  <div>
+    <button (click)="updateRepo(dir.value, msg.value)">Push Changes</button>
+  </div>
+</section>
+<ng-template #list let-update>
+  <app-list [item]="update"></app-list>
+</ng-template>
+<wrapper [newUpdate]="update" [listTemplate]="list">
+  <small>ngStudio</small>
+</wrapper>
 <router-outlet></router-outlet>

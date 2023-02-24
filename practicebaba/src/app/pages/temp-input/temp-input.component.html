@@ -1,0 +1,6 @@
+<ng-content></ng-content>
+<ng-container *ngFor="let value of values">
+  <ng-container
+    *ngTemplateOutlet="template; context: { $implicit: value, iname: name }"
+  ></ng-container>
+</ng-container>

@@ -6,6 +6,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrls: ['./input.component.scss'],
 })
 export class InputComponent {
+  show: boolean = true;
   @Input() bg: string = 'primary';
   _id: string;
   get id(): string {
