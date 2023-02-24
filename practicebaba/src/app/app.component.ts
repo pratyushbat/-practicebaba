@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +7,34 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 })
 export class AppComponent {
   phVal: string;
-  constructor() {}
+  constructor() {
+    // console.log('App consrtructor');
+  }
+
+  // ngOnInit(): void {
+  //   console.log('App: ngoninit');
+  // }
+  // ngOnChanges() {
+  //   console.log('App: ng on changes');
+  // }
+  // ngAfterContentInit() {
+  //   //Called once after the first ngDoCheck().
+  //   console.log('App: ng on content init');
+  // }
+  // ngAfterContentChecked() {
+  //   console.log('App: ng on content checked');
+  // }
+  // ngAfterViewInit() {
+  //   console.log('App: ng on View init');
+  // }
+  // ngAfterViewChecked() {
+  //   console.log('App: ng on View checked');
+  // }
+
+  // ngOnDestroy() {
+  //   console.log('App: ng on Destroy');
+  // }
+
   changeHandler(evt: any) {
     console.log(evt.target.value);
   }

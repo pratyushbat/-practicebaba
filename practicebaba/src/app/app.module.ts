@@ -10,6 +10,9 @@ import { CounterComponent } from './pages/counter/counter.component';
 import { TempInputComponent } from './pages/temp-input/temp-input.component';
 import { ListComponent } from './pages/list/list.component';
 import { WrapperComponent } from './pages/wrapper/wrapper.component';
+import { HelloComponent } from './pages/hello/hello.component';
+import { PagenotfoundComponent } from './pages/pagenotfound/pagenotfound.component';
+import { ByeComponent } from './pages/bye/bye.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +23,9 @@ import { WrapperComponent } from './pages/wrapper/wrapper.component';
     TempInputComponent,
     ListComponent,
     WrapperComponent,
+    HelloComponent,
+    PagenotfoundComponent,
+    ByeComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
