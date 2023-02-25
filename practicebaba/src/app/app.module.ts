@@ -24,6 +24,7 @@ import { AccessdeniedComponent } from './pages/accessdenied/accessdenied.compone
 import { FeatureModule } from './feature/feature.module';
 import { SharedModule } from './shared/shared.module';
 import { HighlightDirective } from './directives/highlight.directive';
+import { UserComponent } from './pages/user/user.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { HighlightDirective } from './directives/highlight.directive';
     AdminComponent,
     AccessdeniedComponent,
     HighlightDirective,
+    UserComponent,
   ],
   imports: [
     BrowserModule,

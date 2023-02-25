@@ -13,6 +13,7 @@ import { AuthGuard } from './auth.guard';
 import { RoleGuard } from './guards/role.guard';
 import { NotcompleteGuard } from './guards/notcomplete.guard';
 import { ModuleGuard } from './guards/module.guard';
+import { UserComponent } from './pages/user/user.component';
 
 const routes: Routes = [
   {
@@ -44,6 +45,11 @@ const routes: Routes = [
     component: AdminComponent,
     canActivate: [AuthGuard],
     resolve: { data: ResolveGuard },
+  },
+  {
+    path: 'user/:id',
+    component: UserComponent,
+    canActivate: [AuthGuard],
   },
 
   {
