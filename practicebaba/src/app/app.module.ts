@@ -23,6 +23,7 @@ import { AdminComponent } from './pages/admin/admin.component';
 import { AccessdeniedComponent } from './pages/accessdenied/accessdenied.component';
 import { FeatureModule } from './feature/feature.module';
 import { SharedModule } from './shared/shared.module';
+import { HighlightDirective } from './directives/highlight.directive';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { SharedModule } from './shared/shared.module';
     AboutEditComponent,
     AdminComponent,
     AccessdeniedComponent,
+    HighlightDirective,
   ],
   imports: [
     BrowserModule,

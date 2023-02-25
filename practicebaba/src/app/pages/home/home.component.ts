@@ -7,6 +7,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
+  num: number = 50;
   channelName = '';
   constructor(private route: ActivatedRoute) {}
   ngOnInit(): void {
