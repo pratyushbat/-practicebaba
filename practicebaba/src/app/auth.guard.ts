@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
   providedIn: 'root',
 })
 export class AuthGuard implements CanActivate {
-  userRole = 'user';
+  userRole = 'admin';
 
   constructor(private router: Router) {}
 
