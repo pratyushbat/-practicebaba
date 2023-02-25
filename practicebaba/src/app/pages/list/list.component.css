@@ -1,0 +1,37 @@
+section {
+  display: inline-grid;
+  grid-template-columns: auto auto auto;
+  text-align: center;
+  padding: 4px;
+  width: 100%;
+  border-bottom: 1px solid grey;
+}
+
+span {
+  width: 20px;
+  height: 15px;
+  display: block;
+}
+
+.file {
+  border-radius: 100%;
+  border: 1px solid black;
+}
+
+.dir {
+  background: orange;
+}
+
+.dir::after {
+  content: "";
+  display: block;
+  width: 5px;
+  height: 5px;
+  background: orange;
+  position: relative;
+  top: -5px;
+}
+
+section div {
+  padding: 4px;
+}/*# sourceMappingURL=list.component.css.map */

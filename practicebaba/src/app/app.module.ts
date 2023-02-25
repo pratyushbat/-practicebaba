@@ -15,6 +15,14 @@ import { PagenotfoundComponent } from './pages/pagenotfound/pagenotfound.compone
 import { ByeComponent } from './pages/bye/bye.component';
 import { ParentOneComponent } from './pages/parent-one/parent-one.component';
 import { ParentOneChildComponent } from './pages/parent-one-child/parent-one-child.component';
+import { MessageComponent } from './pages/message/message.component';
+import { HeaderComponent } from './pages/header/header.component';
+import { AboutComponent } from './pages/about/about.component';
+import { AboutEditComponent } from './pages/about/about-edit/about-edit.component';
+import { AdminComponent } from './pages/admin/admin.component';
+import { AccessdeniedComponent } from './pages/accessdenied/accessdenied.component';
+import { FeatureModule } from './feature/feature.module';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -30,8 +38,20 @@ import { ParentOneChildComponent } from './pages/parent-one-child/parent-one-chi
     ByeComponent,
     ParentOneComponent,
     ParentOneChildComponent,
+    MessageComponent,
+    HeaderComponent,
+    AboutComponent,
+    AboutEditComponent,
+    AdminComponent,
+    AccessdeniedComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    FeatureModule,
+    SharedModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

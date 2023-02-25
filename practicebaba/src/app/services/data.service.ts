@@ -7,6 +7,6 @@ import { of, delay } from 'rxjs';
 export class DataService {
   constructor() {}
   getData() {
-    return of('Web of taslking').pipe(delay(10000));
+    return of('Web of taslking').pipe(delay(3000));
   }
 }
