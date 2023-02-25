@@ -25,6 +25,8 @@ import { FeatureModule } from './feature/feature.module';
 import { SharedModule } from './shared/shared.module';
 import { HighlightDirective } from './directives/highlight.directive';
 import { UserComponent } from './pages/user/user.component';
+import { PromisepageComponent } from './directives/pages/promisepage/promisepage.component';
+import { ObservablepageComponent } from './directives/pages/observablepage/observablepage.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +50,8 @@ import { UserComponent } from './pages/user/user.component';
     AccessdeniedComponent,
     HighlightDirective,
     UserComponent,
+    PromisepageComponent,
+    ObservablepageComponent,
   ],
   imports: [
     BrowserModule,
