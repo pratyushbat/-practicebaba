@@ -9,3 +9,12 @@
 Name: <input type="text" (change)="name = uname.value" #uname />
 <dummy [userId]="uid" [username]="name"></dummy>
 <firstuserlist></firstuserlist>
+
+<div>
+  Getter and setter section below Name:
+  <br />
+  Name : <input type="text" (keyup.enter)="(0)" #gsname />
+  <br />
+  Age: <input type="text" (keyup.enter)="(0)" #gsdob />
+</div>
+<app-users [name]="gsname.value" [dob]="gsdob.value"></app-users>

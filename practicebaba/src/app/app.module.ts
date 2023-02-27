@@ -30,6 +30,7 @@ import { ObservablepageComponent } from './directives/pages/observablepage/obser
 import { DummyComponent } from './pages/dummy/dummy.component';
 import { FirstuserlistComponent } from './pages/firstuserlist/firstuserlist.component';
 import { FirstuserchildComponent } from './pages/firstuserchild/firstuserchild.component';
+import { UsersComponent } from './pages/users/users.component';
 
 @NgModule({
   declarations: [
@@ -58,6 +59,7 @@ import { FirstuserchildComponent } from './pages/firstuserchild/firstuserchild.c
     DummyComponent,
     FirstuserlistComponent,
     FirstuserchildComponent,
+    UsersComponent,
   ],
   imports: [
     BrowserModule,
