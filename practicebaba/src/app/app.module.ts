@@ -27,6 +27,9 @@ import { HighlightDirective } from './directives/highlight.directive';
 import { UserComponent } from './pages/user/user.component';
 import { PromisepageComponent } from './directives/pages/promisepage/promisepage.component';
 import { ObservablepageComponent } from './directives/pages/observablepage/observablepage.component';
+import { DummyComponent } from './pages/dummy/dummy.component';
+import { FirstuserlistComponent } from './pages/firstuserlist/firstuserlist.component';
+import { FirstuserchildComponent } from './pages/firstuserchild/firstuserchild.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +55,9 @@ import { ObservablepageComponent } from './directives/pages/observablepage/obser
     UserComponent,
     PromisepageComponent,
     ObservablepageComponent,
+    DummyComponent,
+    FirstuserlistComponent,
+    FirstuserchildComponent,
   ],
   imports: [
     BrowserModule,

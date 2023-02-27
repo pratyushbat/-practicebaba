@@ -1,0 +1,7 @@
+<p>firstuserlist works!</p>
+<div *ngFor="let user of users">
+  <firstuserchild
+    [user]="user"
+    (updateParentUser)="outParentUser($event)"
+  ></firstuserchild>
+</div>

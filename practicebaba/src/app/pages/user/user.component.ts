@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -9,6 +9,7 @@ import { ActivatedRoute } from '@angular/router';
 export class UserComponent implements OnInit {
   userId: string = '';
   constructor(private route: ActivatedRoute) {}
+
   ngOnInit(): void {
     // this.userId = this.route.snapshot.params['id'];
     //will ot work properly ::for one time only

@@ -1,4 +1,10 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import {
+  Attribute,
+  Component,
+  EventEmitter,
+  Input,
+  Output,
+} from '@angular/core';
 
 @Component({
   selector: 'app-input',
@@ -16,5 +22,7 @@ export class InputComponent {
     this._id = value;
   }
 
-  constructor() {}
+  constructor(@Attribute('bg') id: string) {
+    console.log(id);
+  }
 }

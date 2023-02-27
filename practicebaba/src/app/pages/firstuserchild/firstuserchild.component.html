@@ -1,0 +1,8 @@
+<p>firstuserchild works! {{ user | json }}</p>
+
+<input
+  type="text"
+  (change)="changeName(inpName.value); inpName.value = ''"
+  #inpName
+/>
+<button (click)="resetName()">Reset Name</button>
