@@ -31,6 +31,8 @@ import { DummyComponent } from './pages/dummy/dummy.component';
 import { FirstuserlistComponent } from './pages/firstuserlist/firstuserlist.component';
 import { FirstuserchildComponent } from './pages/firstuserchild/firstuserchild.component';
 import { UsersComponent } from './pages/users/users.component';
+import { DepartmentComponent } from './pages/department/department.component';
+import { DepartmentparentComponent } from './pages/departmentparent/departmentparent.component';
 
 @NgModule({
   declarations: [
@@ -60,6 +62,8 @@ import { UsersComponent } from './pages/users/users.component';
     FirstuserlistComponent,
     FirstuserchildComponent,
     UsersComponent,
+    DepartmentComponent,
+    DepartmentparentComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,13 @@
+<section>
+  <select (change)="onDepartmentChange(dep.value)" #dep>
+    <option disabled value="-1" selected>Choose department</option>
+    <option [value]="i" *ngFor="let dep of departments; index as i">
+      {{ dep.name }}
+    </option>
+  </select>
+  <div>
+    <label> Teacher: </label>
+    <input type="text" (keyup.enter)="(0)" #teacher />
+  </div>
+  <department [department]="selectedDep" [teacher]="teacher.value"></department>
+</section>

@@ -1,0 +1,18 @@
+<p>department works!</p>
+<h1>department</h1>
+<p>
+  {{ department?.name }}
+  <br />
+  New Teacher: {{ teacher }}
+</p>
+
+<hr />
+<h1>All departments</h1>
+<ul>
+  <li *ngFor="let dep of records">
+    Department Name: {{ dep.name }}
+    <ul>
+      <li *ngFor="let teacher of dep.teachers">Teacher name: {{ teacher }}</li>
+    </ul>
+  </li>
+</ul>
