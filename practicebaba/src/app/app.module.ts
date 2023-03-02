@@ -33,6 +33,7 @@ import { FirstuserchildComponent } from './pages/firstuserchild/firstuserchild.c
 import { UsersComponent } from './pages/users/users.component';
 import { DepartmentComponent } from './pages/department/department.component';
 import { DepartmentparentComponent } from './pages/departmentparent/departmentparent.component';
+import { DecoratorsComponent } from './src/app/shared/decorators/decorators.component';
 
 @NgModule({
   declarations: [
@@ -64,6 +65,7 @@ import { DepartmentparentComponent } from './pages/departmentparent/departmentpa
     UsersComponent,
     DepartmentComponent,
     DepartmentparentComponent,
+    DecoratorsComponent,
   ],
   imports: [
     BrowserModule,

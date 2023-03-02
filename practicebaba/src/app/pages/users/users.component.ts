@@ -1,4 +1,9 @@
-import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Confirmable } from '../../shared/decorators/onchange.decorator';
+import {
+  Emoji,
+  OnChangesOe,
+} from 'src/app/shared/decorators/onchange.decorator';
 
 @Component({
   selector: 'app-users',
@@ -6,36 +11,38 @@ import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
   styleUrls: ['./users.component.scss'],
 })
 export class UsersComponent {
-  private _name!: string;
+  @OnChangesOe<string>(function (this: UsersComponent, value: any) {
+    this.uname = value.charAt(0) + ':' + value.substring(1);
+  })
   @Input()
-  get name(): string {
-    return this._name;
-  }
-  set name(val: string) {
-    this._name = val;
-    if (val) this.uname = val.charAt(0) + val.substring(1);
-  }
+  name!: string;
 
   uname!: string;
 
-  private _dob!: string;
+  @OnChangesOe<string>(function (this: UsersComponent, newDate: any) {
+    this.age = this.getAge(newDate);
+    if (this.age > 18) this.message = 'you are adult';
+    else if (this.age > 12 && this.age < 18) this.message = 'you are teen';
+    else this.message = 'you are child';
+  })
   @Input()
-  get dob(): string {
-    return this._dob;
-  }
-  set dob(val: string) {
-    this._dob = val;
-    if (this.dob) this.age = this.getAge(val);
-    if (this.age > 18) {
-      console.log('you are adult');
-    } else {
-      console.log('you are child');
-    }
-  }
+  dob!: string;
 
   age!: number;
 
   message!: string;
+
+  //property decorator
+  @Emoji()
+  flavor: string = 'vanila';
+
+  toppings: string[] = [];
+  //method decorator
+  @Confirmable('Are you sure?')
+  @Confirmable('Are you super super sure? There is no going back!')
+  addTopping(topping: string = 'sprinkels') {
+    this.toppings.push(topping);
+  }
 
   constructor() {}
 

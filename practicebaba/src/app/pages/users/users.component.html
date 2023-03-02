@@ -3,3 +3,7 @@
 <p><strong>Age:</strong> {{ age }}</p>
 <p><strong>DOB:</strong> {{ dob }}</p>
 <p>{{ message }}</p>
+
+<p>{{ flavor }}</p>
+<div (click)="addTopping()">Add toppoing</div>
+<div *ngFor="let item of toppings">{{ item }}</div>

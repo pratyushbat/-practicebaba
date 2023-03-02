@@ -34,7 +34,7 @@ export class DepartmentComponent {
     return this._teacher;
   }
   set teacher(val: string) {
-    this._teacher = val;
+    this._teacher = val + 'hello';
     if (this._teacher && this._teacher.trim().length) {
       this.department?.teachers?.push(this.teacher);
     }
