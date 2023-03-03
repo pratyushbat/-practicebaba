@@ -1,4 +1,10 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  HostListener,
+  OnInit,
+  ViewChild,
+} from '@angular/core';
 import {
   NavigationCancel,
   NavigationEnd,
@@ -6,7 +12,9 @@ import {
   NavigationStart,
   Router,
 } from '@angular/router';
+import { WithTemplate } from './shared/decorators/onchange.decorator';
 
+@WithTemplate('<h1>hai</h1>', 'appone')
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -27,7 +35,7 @@ export class AppComponent {
   isHide = false;
   phVal: string;
   constructor(private router: Router) {
-    this.router.events.subscribe((event) => {
+    this.router?.events.subscribe((event) => {
       if (event instanceof NavigationStart) {
         this.loading = true;
       }
@@ -44,6 +52,10 @@ export class AppComponent {
     // console.log('App consrtructor');
   }
 
+  // @HostListener('click', ['$event'])
+  // onhostclick() {
+  //   alert('hello');
+  // }
   ngOnInit(): void {
     // console.log('App: ngoninit');
     this.counter = 1;
@@ -109,11 +121,9 @@ export class AppComponent {
         this.custominput2.nativeElement.checked = false;
         break;
     }
-    console.log(event.target);
-    console.log(this.custominput1.nativeElement.checked);
     //  const isChecked = (<HTMLInputElement>event.target).checked;
-    //console.log(isChecked);
   }
+
   history: any[] = [];
   update: {} = {};
   updateRepo(dir: any, msg: any) {
