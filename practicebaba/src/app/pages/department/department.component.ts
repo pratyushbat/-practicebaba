@@ -41,6 +41,7 @@ export class DepartmentComponent {
   }
   records: Department[] = [];
   constructor() {}
+  //
   // ngOnChanges(changes: SimpleChanges): void {
   //   if (changes.department && changes.department.currentValue) {
   //     const depIndex = this.records.findIndex(
